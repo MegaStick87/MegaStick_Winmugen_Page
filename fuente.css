@@ -1,0 +1,8 @@
+@font-face {
+    font-family: American_Captain;
+    src:url(fuentes/American_Captain.ttf); 
+}
+
+h1 {
+font-family: American_Captain;
+}
