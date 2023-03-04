@@ -54,3 +54,18 @@ body
 
 
 }
+
+/* Define los estilos para los dispositivos móviles */
+@media (max-width: 767px) {
+    /* Ajusta los estilos para los dispositivos móviles aquí */
+  }
+  
+  /* Define los estilos para las tabletas */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Ajusta los estilos para las tabletas aquí */
+  }
+  
+  /* Define los estilos para las computadoras de escritorio */
+  @media (min-width: 992px) {
+    /* Ajusta los estilos para las computadoras de escritorio aquí */
+  }
