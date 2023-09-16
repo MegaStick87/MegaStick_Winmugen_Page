@@ -15,34 +15,335 @@
     <link rel="stylesheet" href="estilos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8"></script>
     <style type = "text/css">
-        body {
+         body {
             color: rgb(255, 255, 255);
-            background-color:rgb(0, 0, 0)  
-        }
-        body {
+            background-color: rgb(0, 0, 0);
             margin: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
         }
-
-        p {
-      font-family: 'KdamThmorPro-Regular', sans-serif; 
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            border-bottom: 2px solid white;
+            border-top: 2px solid white;
+            padding: 10px;
+        }
+        p, h3 {
+            font-family: 'KdamThmorPro-Regular', sans-serif;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    h3 {
-      font-family: 'KdamThmorPro-Regular', sans-serif;
+
+    .charlist {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
+    .charprof {
+      border: 1px solid #ccc;
+      margin: 1em;
+      width: calc(33% - 2em);
+      box-sizing: border-box;
+    }
+
+    .cpTop, .cpCenter, .cpLeft, .cpRight {
+      padding: 1em;
+    }
+
+    .cpLeft img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .finished {
+      color: rgb(9, 255, 0);
+    }
+
+    .not-released {
+      color: rgb(255, 0, 0);
+    }
+
+    .in-progress {
+      color: rgb(255, 166, 0);
+    }
+    .evil-nald-color {
+  color: rgb(0, 204, 255);
+  font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+    }
+    .evil-ronald-color {
+  color: rgb(0, 204, 255);
+  font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.glitch-status {
+  color: rgb(255, 136, 0);
+}
+
+.public-status {
+  color: rgb(9, 255, 0);
+}
+
+.download-link {
+  color: rgb(43, 255, 0);
+}
+
+.ultimate-evil-donald-color {
+  color: rgb(0, 204, 255);
+  font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.totally-finished-status {
+  color: rgb(0, 255, 0);
+}
+
+.leaked-status {
+  color: rgb(255, 0, 0);
+}
+
+.ultimate-donald-solo-color {
+  color: rgb(223, 219, 0);
+  font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.ice-donald-solo-color {
+    color: rgb(0, 89, 255);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.private-status {
+    color: rgb(255, 0, 0);
+}
+
+.not-available-status {
+    color: rgb(255, 0, 0);
+}
+
+.mini-ice-donald-color {
+    color: rgb(0, 89, 255);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.mini-ice-donald-img {
+    height: 100px;
+}
+
+.offline-status {
+    color: rgb(255, 251, 0);
+}
+
+.me-per-donas-color {
+    color: rgb(238, 255, 0);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.me-per-donas-img {
+    height: 200px;
+}
+
+.available-dm-status {
+    color: rgb(251, 255, 0);
+}
+
+.mac-ice-piero-color {
+    color: rgb(0, 68, 255);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.donald-color {
+    color: rgb(255, 0, 0);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.solo-color {
+    color: rgb(242, 255, 65);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.a5x-r-color, .remastered-a5x {
+    color: rgb(255, 255, 255);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.ultimate-title {
+    color: rgb(255, 238, 0);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.spicy-title {
+    color: rgb(255, 30, 0);
+    font-size: 2em;  /* Ajusta este valor a mi preferencia */
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.stages-title {
+    color: rgb(255, 255, 255);
+    font-size: 2em;  /* Aumenta el tamaño del texto */
+    font-weight: bold;  /* Hace el texto en negrita */
+    text-shadow: 2px 2px 4px #000000;  /* Añade una sombra para hacerlo más destacado */
+}
+
+.special-title {
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.cancelled-title {
+    color: rgb(255, 0, 0); 
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    animation: color-change 3s infinite linear;
+}
+
+.fairy-title {
+    color: rgb(0, 153, 255);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.not-finished-status {
+    color: rgb(255, 0, 0);
+}
+
+.non-released-status {
+    color: rgb(255, 0, 0);
+}
+
+
+@keyframes color-change {
+    0% {
+        color: rgb(255, 0, 0);
+    }
+    25% {
+        color: rgb(255, 166, 0);
+    }
+    50% {
+        color: rgb(255, 255, 0);
+    }
+    75% {
+        color: rgb(255, 255, 255);
+    }
+    100% {
+        color: rgb(255, 0, 0);
+    }
+}
+
+.ice-title {
+    color: rgb(0, 89, 255);
+    font-size: 2em;
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.partially-finished-status {
+    color: rgb(179, 255, 0);
+}
+
+.non-released-status {
+    color: rgb(255, 0, 0);
+}
+
+.zander-title {
+    color: rgb(0, 68, 255);
+    font-size: 2em;
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.beta-phase-status {
+    color: rgb(255, 238, 0);
+}
+
+.not-available-status {
+    color: rgb(255, 0, 0);
+}
+
+.limited-distribution-status {
+    color: rgb(255, 0, 0);
+}
+
+.metal-title {
+    color: rgb(167, 167, 167);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.dark-title {
+    color: rgb(85, 10, 0);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.cancelled-percentage {
+    color: rgb(255, 123, 0);
+}
+
+.preview-link {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.ultimate_solo-r-title {
+    color: rgb(255, 251, 0);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.dilemma-title {
+    color: rgb(251, 255, 0);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.scroll-to-top button {
+    background-color: #2e2e2e;  /* Color de fondo del botón */
+    color: rgb(255, 255, 255);  /* Color del texto */
+    padding: 14px 20px;  /* Espaciado interior */
+    margin: 14px 0;  /* Margen exterior */
+    border: none;  /* Sin bordes */
+    cursor: pointer;  /* Cursor de mano */
+    text-align: center;  /* Texto centrado */
+    font-family: "American_Captain", sans-serif;  /* Especificar la fuente */
+}
+
+.char-title.dark-killer-donald-title {
+    color: rgb(19, 19, 19);
+    font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+    text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
     </style>
     <link rel="stylesheet" type="text/css" href="fuente.css"/>
-<center>
-
-    <h3>______________________________________</h3>
+    <br>
     
-<br><br><p style="text-align:center;font:48pt American_Captain;color:#ffffff;margin: 0px;line-height: 36pt">Mugen Char Repository</p><br>
-
-<h3>______________________________________</h3>
+        <p style="text-align: center; font: 48pt 'American_Captain'; color: #ffffff; margin: 0px; line-height: 1.2; letter-spacing: 2px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); border-top: 2px solid white; border-bottom: 2px solid white; padding: 10px;">
+            Mugen Char Repository
+        </p>
 
 <br>
 
@@ -50,14 +351,12 @@
 <body>
 
     </a>
-    
-    <header>
 
 
         <h3>This page is to present all my mugen characters that I have created and you will able to download them!</h3>
         <br>
 
-        <h3>______________________________________</h3>
+        <header>
         
 
             <h3> Well, I'm MegaStick.
@@ -67,7 +366,6 @@
                 
                 On this page you will find absolutely all the projects I have done for this engine. <br>
                 
-                <p>  </p>
             
 
                 <h1>MegaStick:</h1>
@@ -80,39 +378,39 @@
 
                     <div>
 
-                    <h3>______________________________________</h3><br>
+                    <header>
 
-            <h3> Notes (Update 07/08/2023):  </h3>  <br>
+            <h3> Notes (Update 15/09/2023):  </h3>  <br>
             <h3>
-            I have updated the page again! <br>
+            I have updated the page again, with a major update! <br>
             <br>
-            -Main menu color changed. <br>
-            -Added icons in the main manu. <br>
-            -Spicy Solo is fully completed, i moved him to the main character section. <br>
-            -And i added other edit in the img files...  <br> 
-
-                   <h3>______________________________________</h3> <br>
-
-                </div>
-
+            -Main menu changed! (I optimized the code). <br>
+            -Now the Main Menu is in vertical style! <br>
+            -Added a lost character, u can see to what char i'm talking about in the character section! <br>
+            -Optimized code for this second page! <br> 
+            -I'm not sure if it looks better on a mobile device, at least the first page does, but it is recommended to view it on a PC for the best experience. <br> 
+            -I added a new button that lets you go back to the top of the page once you've finished reading everything, so it's quicker to go back. <br> 
+            -I improved the presentation of the characters a little bit more. <br> 
         </p>
     </header>
-        <center>
+    <div class="centered">
     <h1>Character List (2018 to 2022):</h1>
-    
+    </div>
+
     <div class="charlist">
         <div class="charprof">
-            <div class="cpTop">
-                <h1>Crazy Donald X</h1></div>
-            <div class="cpCenter">
-                <div class="cpLeft">
-                    <img src="img/Crazy_X_Portrait.png" height="200"/>
-                </div>
-                <div class="cpRight">
-                    <div class="charstatus">
-                        <h3>Status: <span style="color: rgb(255, 166, 0);">Finished...?</span></h3>
-                        <h3>Privacy: <span style="color: rgb(255, 0, 0);">Not Released to the public. (No Download Link)</span></h3>
-                        <h3>Description: </h3>
+          <div class="cpTop">
+            <h1>Crazy Donald X</h1>
+          </div>
+          <div class="cpCenter">
+            <div class="cpLeft">
+              <img src="img/Crazy_X_Portrait.png" alt="Crazy Donald X Portrait">
+            </div>
+            <div class="cpRight">
+              <div class="charstatus">
+                <h3>Status: <span class="in-progress">Finished...?</span></h3>
+                <h3>Privacy: <span class="not-released">Not Released to the public. (No Download Link)</span></h3>
+                <h3>Description: </h3>
                             <p>
                                 It was the first Donald edit I ever did! <br>
                                 In 2018 I was experimenting, and well, out came this "thing." <br>
@@ -121,399 +419,384 @@
                                 Although, looking at it, it looks pretty creepy. <br>
                                 So well, I won't give any more info or pictures/videos of the gameplay, or anything about this character... <br>
                             </p>
-                    </div>
-                </div>
-            </div>
-        </div>      
-
-    <div class="charlist">
-        <div class="charprof">
-            <div class="cpTop">
-                <h1> <span style="color:rgb(0, 204, 255);">Evil Nald</span></h1></div>
-            <div class="cpCenter">
-                <div class="cpLeft">
-                    <img src="img/Evil_Nald_Stand.gif">
-                </div>
-                <div class="cpRight">
-                    <div class="charstatus">
-                        <h3>Status: <span style="color: rgb(9, 255, 0);">Finished!</span></h3>
-                        <h3>Privacy: <span style="color: rgb(255, 0, 0);">Not Released to the public. (No Download Link)</span></h3>
-                        <h3>Description: </h3>
-                            <p>
-                                Evil Nald is simply an edit of the famous headless Donald. (Nald) <br>
-                                This was the second edit I made in 2018. <br>
-                                There are no major changes, other than the color and one or two other changes. <br>
-                                Very few people have this edit nowadays. <br>
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-            <div class="charlist">
-                <div class="charprof">
-                    <div class="cpTop">
-                        <h1> <span style="color:rgb(0, 204, 255);">Evil Ronald</span></h1></div>
-                    <div class="cpCenter">
-                        <div class="cpLeft">
-                            <img src="img/Evil_Ronald_Stand.gif">
                         </div>
-                        <div class="cpRight">
-                            <div class="charstatus">
-                                <h3>Status: <span style="color: rgb(255, 136, 0);">Finished! But, with glitches!</span></h3>
-                                <h3>Privacy: <span style="color: rgb(9, 255, 0);">Totally Public!</span></h3>
-                                <h3>Description: </h3>
-                                    <p>
-                                        Evil Ronald, a modification of the iconic "Golden Ronald", or the Ronald who speaks English. <br>
-                                     This was the first edit I released to the public once I returned to mugen! <br>
-                                     It is strong, and has several things added from Dark Donald, but due to my low coding knowledge at that time, it has glitches <br>
-                                     which are easy to fix, but, I don't feel like doing it anymore. 
-                                     So you can try it! <br>
-
-                                    </p>
-                            </div>
-                        </div>
+                      </div>
                     </div>
-                    <div class="cpBottom"><p><a href="http://www.mediafire.com/file/4n2koykkjfe97xu/Evil_Ronald.zip/file"> <span style="color: rgb(43, 255, 0);">[DOWNLOAD]</a></p></span>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+                  </div>
 
-                 <div class="charlist">
-                <div class="charprof">
-                    <div class="cpTop">
-                        <h1> <span style="color:rgb(0, 204, 255);">Custom Cheap Evil Ronald</span></h1></div>
-                    <div class="cpCenter">
-                        <div class="cpLeft">
-                            <img src="img/Evil_Ronald_Stand.gif">
-                        </div>
-                        <div class="cpRight">
-                            <div class="charstatus">
-                                <h3>Status: <span style="color: rgb(0, 255, 0);">Finished!</span></h3>
-                                <h3>Privacy: <span style="color: rgb(9, 255, 0);">Totally Public!</span></h3>
-                                <h3>Description: </h3>
-                                    <p>
-                                     Custom Cheap Evil Ronald, Is an another modification to "Golden Ronald" <br>
-                                     This was Ronald's second edit I did! <br>
-                                     This version is cheaper than the previous one, since it is obviously the same as Dark Donald.  <br>
-                                     It's a fusion in a nutshell. <br>
-                                     Evil Donald + Ronald + Dark Donald = Custom Cheap Evil Ronald. 😯 <br>
-                                     So well, it's free of glitches, so, I hope you enjoy it! <br>
-
-                                    </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cpBottom">
-                        <p><a href="http://www.mediafire.com/file/09wfgaiu59r5dho/Custom_Cheap_Evil_Ronald.zip/file"><span style="color: rgb(72, 255, 0);">[DOWNLOAD]</a></p></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    <div class="charlist">
-                        <div class="charprof">
-                            <div class="cpTop">
-                                <h1> <span style="color:rgb(0, 204, 255);">Ultimate Evil Donald v1.2 (Especial Release)</span></h1></div>
-                            <div class="cpCenter">
-                                <div class="cpLeft">
-                                    <img src="img/Ultimate_Evil_Donald_Stand.gif">
-                                </div>
-                                <div class="cpRight">
-                                    <div class="charstatus">
-                                        <h3>Status: <span style="color: rgb(0, 255, 0);">Totally Finished and Released!</span></h3>
-                                        <h3>Privacy: <span style="color: rgb(255, 0, 0);">Leaked... (Totally)</span></h3>
-                                        <h3>Description: </h3>
-                                            <p>
-                                                Well, Ultimate Evil Donald. <br>
-                                                Not much to comment, it's a mix of Ultimate Donald and Evil Donald. <br>
-                                                With many new improvements and additions! <br>
-                                                The 9p is Dark Evil Donald! <br>
-                                                With the original Ultimate Donald controls. <br>
-                                                (Something that even SilverMugen's Ultimate Evil Donald doesn't have) So I think it's the most faithful version. <br>
-                                                <br>
-                                                NOTE:
-                                                <br>
-                                                Unfortunately, it was leaked, there is nothing more that can be done, I only ask you to read the readme, and do not misuse it. <br>
-        
-                                            </p>
-                                    </div>
-                                </div>
-                            </div>
-                                <div class="cpBottom">
-                                <h3><p><a href="https://www.youtube.com/watch?v=O0lWb0XWzXQ&t=">Showcase or Random Battle Video!</a></p></h3>
-                                <p><a href="https://www.mediafire.com/file/3pe7edc1ysxrvlp/Ultimate_Evil_Donald_v1.2.zip/file"><span style="color: rgb(72, 255, 0);">[DOWNLOAD]</a></p></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                    <div class="charlist">
-                        <div class="charprof">
-                            <div class="cpTop">
-                                <h1> <span style="color:rgb(223, 219, 0);">Ultimate Donald Solo v3.3 (Final)</span></h1></div>
-                            <div class="cpCenter">
-                                <div class="cpLeft">
-                                    <img src="img/Ultimate_Donald_Solo_Stand_3.3.gif">
-                                </div>
-                                <div class="cpRight">
-                                    <div class="charstatus">
-                                        <h3>Status: <span style="color: rgb(0, 255, 0);">Totally Finished and Released!</span></h3>
-                                        <h3>Privacy: <span style="color: rgb(255, 0, 0);">Leaked v3.3... (Totally)</span></h3>
-                                        <h3>Description: </h3>
-                                            <p>
-                                                Ultimate Donald Solo... <br>
-                                                I guess it's one of the most popular edits I've ever done! <br>
-                                                I ended up with more than 7 versions in total! (It's crazy) <br>
-                                                Currently it's totally finished. <br>
-                                                And so far, it's the Solo with the strongest resurrection, it's well animated and visually beautiful! <br>
-                                                <br>
-                                                NOTE:
-                                                <br>
-                                                Unfortunately, it was leaked, there is nothing more that can be done, I only ask you to read the readme, and do not misuse it. <br>
-                                                Ultimate Donald-R is the latest version of this char, so, it remains private. <br>
-        
-                                            </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cpBottom">
-                                <h3><p><a href="https://www.youtube.com/watch?v=319Zz_8oLcw">[Showcase And Random Battle Video!]</a></p></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                                    <div class="charlist">
-                                        <div class="charprof">
-                                            <div class="cpTop">
-                                                <h1> <span style="color:rgb(0, 89, 255);">Ice Donald Solo v1.1</span></h1></div>
-                                            <div class="cpCenter">
-                                                <div class="cpLeft">
-                                                    <img src="img/Ice_Donald_Solo_Stand.gif">
-                                                </div>
-                                                <div class="cpRight">
-                                                    <div class="charstatus">
-                                                        <h3>Status: <span style="color: rgb(0, 255, 0);">Totally Finished and Released!</span></h3>
-                                                        <h3>Privacy: <span style="color: rgb(255, 0, 0);">Private (Totally)</span></h3>
-                                                        <h3>Description: </h3>
-                                                            <p>
-                                                                Once upon a time, I released a Donald edit dedicated to my favorite season, Christmas! <br>
-                                                                This edit is my favorite. I think it's the best Donald I've done to date, as it was a lot of fun to create! <br>
-                                                                It took me more than 6 months to do the update, but, it was worth it! <br>
-                                                                As it has new effects, new animations, stronger 12p and everything in general, it's nicer and smoother! <br>                                   
-                                                                It was only delivered in December 2020! <br>
-                                                                So it is more exclusive now. <br>
-
-                                                                <br>
-                                                                NOTE:
-                                                                <br>
-                                                                Unfortunately, the v1.0 it was leaked, there is nothing more that can be done, I only ask you to read the readme, and do not misuse it. <br>
-                        
-                                                            </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="cpBottom">
-                                                <h3><p><a href="https://www.youtube.com/watch?v=3h3nXWmctCw&t=">[Showcase And Random Battle Video!]</a></p></h3>
-                                                <h3>DL = <span style="color: rgb(255, 0, 0);">NOT AVALIABLE ANYMORE! (v1.1)</span></h3>
-                                                <p><a href="https://www.mediafire.com/file/83esst47kpes41p/Ice_Donald_Solo_v1.0.zip/file"><span style="color: rgb(72, 255, 0);">[DOWNLOAD v1.0]</a></p></span>
-
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="charlist">
-                                <div class="charprof">
-                                    <div class="cpTop">
-                                        <h1> <span style="color:rgb(0, 89, 255);">Mini Ice Donald</span></h1></div>
-                                    <div class="cpCenter">
-                                        <div class="cpLeft">
-                                            <img src="img/Mini_Ice_Donald.gif" height="100">
-                                        </div>
-                                        <div class="cpRight">
-                                            <div class="charstatus">
-                                                <h3>Status: <span style="color: rgb(0, 255, 0);">Totally Finished and Released!</span></h3>
-                                                <h3>Privacy: <span style="color: rgb(255, 251, 0);">Offline.</span></h3>
-                                                <h3>Description: </h3>
-                                                    <p>
-                                                        This edit was released to the public some time ago. <br>
-                                                        When Ice Donald Solo was released in 2020 <br>
-                                                        it was enclosed as a small gift. <br>
-
-                                                        It's just a lot of little Ice Donald clones. <br>
-                                                        funny to see that, oh, but there are no videos... <br>
-                                                        I had forgotten to put this edit here haha. <br>
-                
-                                                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        <h2>No DL or Preview... ):</h2>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
 
                   <div class="charlist">
-             <div class="charprof">
-                 <div class="cpTop">
-                    <h1> <span style="color:rgb(238, 255, 0);">Me per d0nas¿</span></h1></div>
-                 <div class="cpCenter">
-                     <div class="cpLeft">
-                         <img src="img/Meper_Stand.png" height="200"/>
-                     </div>
-                     <div class="cpRight">
-                         <div class="charstatus">
-                             <h3>Status: <span style="color: rgb(0, 255, 0);">Finished!</span></h3>
-                             <h3>Privacy: <span style="color: rgb(255, 251, 0);">Private (?) Not released to the public. (Offline)</span></h3>
-                             <h3>Description: </h3>
-                                 <p>
-                                    Do I have to say what this thing does? <br>
-                                    It's a char based on a Spanish meme called "Me perdonas?" or "Me per d0nas¿" <br>
-                                    It's a null, and does no more! <br>                                    
-                                    When you pick it in mugen, it makes the sound of "Me perdonas?" <br> 
-                                    And in battle it does the same thing, but with loop. And emm... That's all. lol <br> 
-                                    Oh, and it's the first edit I've done that isn't a Donald. <br>
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                                  <h3>DL = <span style="color: rgb(251, 255, 0);">Avaliable in DM...</span></h3>
-                                 </p>
-                         </div>
-                     </div>
-                 </div>
-
-                 <div class="charlist">
-            <div class="charprof">
-                <div class="cpTop">
-                <h1> <span style="color:rgb(0, 68, 255);">Mac The Ice Piero (Unique Ice) (凍結特異)</span></h1></div>
-                <div class="cpCenter">
-                    <div class="cpLeft">
-                        <img src="img/Unique.gif">
-                    </div>
-                    <div class="cpRight">
-                        <div class="charstatus">
-                            <h3>Status: <span style="color: rgb(0, 255, 0);">Totally Finished and Released!</span></h3>
-                            <h3>Privacy: <span style="color: rgb(255, 0, 0);">Leaked... (Totally)</span></h3>
-                            <h3>Description: </h3>
-                                <p>
-                                    I think this is the most curious or weirdest Donald edit I've ever done! <br>
-                                    I like too much the "Unique" edits <br>
-                                    And I said, why not create my own? <br>
-                                    It's the char that cost me the least work to make, and the one that took me the least time to release! <br>
-                                    And yes, it's a mix between Ice Donald and Mac The Death Piero! <br>
-                                    It's the strongest Donald edit I've done so far! <br>
-
-                                    <br>
-                                    NOTE:
-                                    <br>
-                                    Unfortunately, it was leaked, there is nothing more that can be done, I only ask you to read the readme, and do not misuse it. <br>
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                                  <div class="cpBottom">
-                                      <h3><p><a href="https://www.youtube.com/watch?v=5FbCDK5INQA&t=">[Showcase And Random Battle Video!]</a></p></h3>
-                                      <p><a href="https://www.mediafire.com/file/3dgte4g3hztzjq9/Mac_The_Ice_Piero.zip/file"><span style="color: rgb(72, 255, 0);">[DOWNLOAD]</a></p></span>
-                                </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="charlist">
-                <div class="charprof">
-                    <div class="cpTop">
-                        <h1> <span style="color:rgb(255, 41, 41);">Donald <span style="color:rgb(242, 255, 65);"> Solo <span style="color:rgb(255, 255, 255);"> A5X-R</span></h1></div>
-                        <h1> <span style="color:rgb(255, 255, 255);">-REMASTERED A5X-</span></h1>
-                    <div class="cpCenter">
+                    <div class="charprof">
+                      <div class="cpTop">
+                        <h1><span class="evil-nald-color">Evil Nald</span></h1>
+                      </div>
+                      <div class="cpCenter">
                         <div class="cpLeft">
-                            <img src="img/A5X-R_Stand.gif"/>
+                          <img src="img/Evil_Nald_Stand.gif" alt="Evil Nald Standing">
                         </div>
                         <div class="cpRight">
-                            <div class="charstatus">
-                                <h3>Status: <span style="color: rgb(43, 255, 0);">Totally Finished And Released! - (100%)</span></h3>
-                                <h3>Privacy: <span style="color: rgb(255, 0, 0);">Private (Totally)</span></h3>
-                                <h3>Description: </h3>
+                          <div class="charstatus">
+                            <h3>Status: <span class="finished">Finished!</span></h3>
+                            <h3>Privacy: <span class="not-released">Not Released to the public. (No Download Link)</span></h3>
+                            <h3>Description:</h3>
+                            <p>
+                              Evil Nald is simply an edit of the famous headless Donald (Nald). <br>
+                              This was the second edit I made in 2018. <br>
+                              There are no major changes, other than the color and one or two other changes. <br>
+                              Very few people have this edit nowadays. <br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="charlist">
+                    <div class="charprof">
+                      <div class="cpTop">
+                        <h1><span class="evil-ronald-color">Evil Ronald</span></h1>
+                      </div>
+                      <div class="cpCenter">
+                        <div class="cpLeft">
+                          <img src="img/Evil_Ronald_Stand.gif" alt="Evil Ronald Standing">
+                        </div>
+                        <div class="cpRight">
+                          <div class="charstatus">
+                            <h3>Status: <span class="glitch-status">Finished! But, with glitches!</span></h3>
+                            <h3>Privacy: <span class="public-status">Totally Public!</span></h3>
+                            <h3>Description:</h3>
+                            <p>
+                              Evil Ronald, a modification of the iconic "Golden Ronald," or the Ronald who speaks English. <br>
+                              This was the first edit I released to the public once I returned to mugen! <br>
+                              It is strong, and has several things added from Dark Donald, but due to my low coding knowledge at that time, it has glitches <br>
+                              which are easy to fix, but I don't feel like doing it anymore.
+                              So you can try it! <br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cpBottom">
+                        <p><a href="http://www.mediafire.com/file/4n2koykkjfe97xu/Evil_Ronald.zip/file" class="download-link">[DOWNLOAD]</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="charlist">
+                    <div class="charprof">
+                      <div class="cpTop">
+                        <h1><span class="custom-cheap-evil-ronald-color">Custom Cheap Evil Ronald</span></h1>
+                      </div>
+                      <div class="cpCenter">
+                        <div class="cpLeft">
+                          <img src="img/Evil_Ronald_Stand.gif" alt="Custom Cheap Evil Ronald Standing">
+                        </div>
+                        <div class="cpRight">
+                          <div class="charstatus">
+                            <h3>Status: <span class="finished">Finished!</span></h3>
+                            <h3>Privacy: <span class="public-status">Totally Public!</span></h3>
+                            <h3>Description:</h3>
+                            <p>
+                              Custom Cheap Evil Ronald is another modification of "Golden Ronald." <br>
+                              This was the second Ronald edit I made! <br>
+                              This version is cheaper than the previous one, as it is essentially the same as Dark Donald. <br>
+                              It's a fusion in a nutshell: Evil Donald + Ronald + Dark Donald = Custom Cheap Evil Ronald. 😯 <br>
+                              So, it's free of glitches, and I hope you enjoy it! <br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cpBottom">
+                        <p><a href="http://www.mediafire.com/file/09wfgaiu59r5dho/Custom_Cheap_Evil_Ronald.zip/file" class="download-link">[DOWNLOAD]</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                
+                  <div class="charlist">
+                    <div class="charprof">
+                      <div class="cpTop">
+                        <h1><span class="ultimate-evil-donald-color">Ultimate Evil Donald v1.2 (Especial Release)</span></h1>
+                      </div>
+                      <div class="cpCenter">
+                        <div class="cpLeft">
+                          <img src="img/Ultimate_Evil_Donald_Stand.gif" alt="Ultimate Evil Donald Standing">
+                        </div>
+                        <div class="cpRight">
+                          <div class="charstatus">
+                            <h3>Status: <span class="totally-finished-status">Totally Finished and Released!</span></h3>
+                            <h3>Privacy: <span class="leaked-status">Leaked... (Totally)</span></h3>
+                            <h3>Description:</h3>
+                            <p>
+                              Ultimate Evil Donald is a mix of Ultimate Donald and Evil Donald, with many new improvements and additions. <br>
+                              The 9p is Dark Evil Donald and it comes with the original Ultimate Donald controls. <br>
+                              It's the most faithful version, even when compared to SilverMugen's Ultimate Evil Donald. <br>
+                              <strong>NOTE:</strong><br>
+                              Unfortunately, it was leaked. All that can be done now is to read the readme and not misuse it. <br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cpBottom">
+                        <h3><p><a href="https://www.youtube.com/watch?v=O0lWb0XWzXQ&t=" class="video-link">Showcase or Random Battle Video!</a></p></h3>
+                        <p><a href="https://www.mediafire.com/file/3pe7edc1ysxrvlp/Ultimate_Evil_Donald_v1.2.zip/file" class="download-link">[DOWNLOAD]</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="charlist">
+                    <div class="charprof">
+                      <div class="cpTop">
+                        <h1><span class="ultimate-donald-solo-color">Ultimate Donald Solo v3.3 (Final)</span></h1>
+                      </div>
+                      <div class="cpCenter">
+                        <div class="cpLeft">
+                          <img src="img/Ultimate_Donald_Solo_Stand_3.3.gif" alt="Ultimate Donald Solo Standing v3.3">
+                        </div>
+                        <div class="cpRight">
+                          <div class="charstatus">
+                            <h3>Status: <span class="totally-finished-status">Totally Finished and Released!</span></h3>
+                            <h3>Privacy: <span class="leaked-status">Leaked v3.3... (Totally)</span></h3>
+                            <h3>Description:</h3>
+                            <p>
+                              Ultimate Donald Solo is one of my most popular edits, with over 7 versions! <br>
+                              It's totally finished now and features the strongest resurrection among the Solos, with excellent animations and visuals. <br>
+                              <strong>NOTE:</strong><br>
+                              Unfortunately, it was leaked. I ask you to read the readme and not misuse it. The latest version, Ultimate Donald-R, remains private. <br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cpBottom">
+                        <h3><p><a href="https://www.youtube.com/watch?v=319Zz_8oLcw" class="video-link">[Showcase And Random Battle Video!]</a></p></h3>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1><span class="ice-donald-solo-color">Ice Donald Solo v1.1</span></h1>
+                        </div>
+                        <div class="cpCenter">
+                            <div class="cpLeft">
+                                <img src="img/Ice_Donald_Solo_Stand.gif" alt="Ice Donald Solo Standing v1.1">
+                            </div>
+                            <div class="cpRight">
+                                <div class="charstatus">
+                                    <h3>Status: <span class="totally-finished-status">Totally Finished and Released!</span></h3>
+                                    <h3>Privacy: <span class="private-status">Private (Totally)</span></h3>
+                                    <h3>Description:</h3>
                                     <p>
-                                        For years, I have been working with the "Solos" edits, which have always been very curious to me. <br>
-                                            They have some pretty interesting stuff, Spicy Donald Solo was going to be the last <br>
-                                            Solo edit I would do, but in the end, A5X-R came along. <br>
-                                            With all the practice I've had over the years <br> 
-                                            I wanted to make it as fun as possible, of course, without losing its original essence <br>
-                                            since it's a remastering, not a remake. <br>
+                                        My favorite edit, Ice Donald Solo, was initially released as a tribute to Christmas. <br>
+                                        With more than 6 months of updates, the character now features new effects, animations, and a stronger 12p. <br>
+                                        Released in December 2020, it has become more exclusive. <br>
+                                        <strong>NOTE:</strong><br>
+                                        The v1.0 version was leaked, so please read the readme and use responsibly. <br>
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <h2>Public version: </h2>
-                        <p><a href="https://www.mediafire.com/file/13fo4y6gyibdcxk/Donald_Solo_a5+X-R.zip/file"><span style="color: rgb(72, 255, 0);">[DOWNLOAD]</a></p></span>
+                        <div class="cpBottom">
+                            <h3><p><a href="https://www.youtube.com/watch?v=3h3nXWmctCw&t=" class="video-link">[Showcase And Random Battle Video!]</a></p></h3>
+                            <h3>DL = <span class="not-available-status">NOT AVAILABLE ANYMORE! (v1.1)</span></h3>
+                            <p><a href="https://www.mediafire.com/file/83esst47kpes41p/Ice_Donald_Solo_v1.0.zip/file" class="download-link-v1">[DOWNLOAD v1.0]</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-                            
+                
+   
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1><span class="mini-ice-donald-color">Mini Ice Donald</span></h1>
+                        </div>
+                        <div class="cpCenter">
+                            <div class="cpLeft">
+                                <img src="img/Mini_Ice_Donald.gif" alt="Mini Ice Donald Standing" class="mini-ice-donald-img">
+                            </div>
+                            <div class="cpRight">
+                                <div class="charstatus">
+                                    <h3>Status: <span class="totally-finished-status">Totally Finished and Released!</span></h3>
+                                    <h3>Privacy: <span class="offline-status">Offline.</span></h3>
+                                    <h3>Description:</h3>
+                                    <p>
+                                        Mini Ice Donald was a small gift released alongside Ice Donald Solo in 2020. <br>
+                                        It features multiple mini clones of Ice Donald. <br>
+                                        Unfortunately, no videos are available to showcase this edit. <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cpBottom">
+                            <h2>No DL or Preview... ):</h2>
+                        </div>
+                    </div>
+                </div>
+                          
+                   
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1><span class="me-per-donas-color">Me per d0nas¿</span></h1>
+                        </div>
+                        <div class="cpCenter">
+                            <div class="cpLeft">
+                                <img src="img/Meper_Stand.png" alt="Me per d0nas¿ Standing" class="me-per-donas-img">
+                            </div>
+                            <div class="cpRight">
+                                <div class="charstatus">
+                                    <h3>Status: <span class="totally-finished-status">Totally Finished!</span></h3>
+                                    <h3>Privacy: <span class="offline-status">Offline.</span></h3>
+                                    <h3>Description:</h3>
+                                    <p>
+                                        This character is based on the Spanish meme "Me perdonas?" or "Me per d0nas¿". <br>
+                                        It does not do much besides looping the sound "Me perdonas?" during battle. <br>
+                                        This is the first edit I've done that isn't a Donald. <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cpBottom">
+                            <h3>DL: <span class="available-dm-status">Available in DM...</span></h3>
+                        </div>
+                    </div>
+                </div>
+                
 
                 <div class="charlist">
                     <div class="charprof">
                         <div class="cpTop">
-                            <h1> <span style="color:rgb(255, 238, 0);">Ultimate Ronald - The Complete version!</span></h1></div>
+                            <h1><span class="mac-ice-piero-color">Mac The Ice Piero (Unique Ice) (凍結特異)</span></h1>
+                        </div>
                         <div class="cpCenter">
                             <div class="cpLeft">
-                                <img src="img/U_Ronald_Stand_new.gif"/>
+                                <img src="img/Unique.gif" alt="Mac The Ice Piero Standing">
                             </div>
                             <div class="cpRight">
                                 <div class="charstatus">
-                                    <h3>Status: <span style="color: rgb(43, 255, 0);">Totally Finished And Released! - (100%)</span></h3>
-                                    <h3>Privacy: <span style="color: rgb(43, 255, 0);">Totally Public!</span> <span style="color:rgb(255, 0, 0);"> - LEAKED!</span></h1></div>
-                                        <h3>Description: </h3>
-                                        <p>
-                                            Ultimate Donald, one of the most popular edits and one that I'm quite fond of, because thanks to this edit, mine exist! <br>
-                                            So, wasn't there supposed to be an Ultimate Donald R/Ultimate Ronald? <br>
-                                            Yes, the original author has created several versions, and in 2020 the last update was released <br>
-                                            <br>
-                                            <br>
-                                            But... something is missing... 
-                                            <br>
-                                            <br>
-                                            Do you know what it is? <br>
-        
-                                        </p>
-                                    </div>
+                                    <h3>Status: <span class="totally-finished-status">Totally Finished and Released!</span></h3>
+                                    <h3>Privacy: <span class="leaked-status">Leaked... (Totally)</span></h3>
+                                    <h3>Description:</h3>
+                                    <p>
+                                        This is perhaps the most unique Donald edit I've made. <br>
+                                        A blend between Ice Donald and Mac The Death Piero, it's my strongest Donald edit to date. <br>
+                                        Note: Sadly, it was leaked. Please read the readme and use responsibly. <br>
+                                    </p>
                                 </div>
-                                <div class="cpBottom">
-                                    <p><a href="https://www.mediafire.com/file/ib9k6bzjey7nelb/Ultimate+Donald+R.zip/file"><span style="color: rgb(72, 255, 0);">[DOWNLOAD]</a></p></span>
+                            </div>
+                        </div>
+                        <div class="cpBottom">
+                            <h3><a href="https://www.youtube.com/watch?v=5FbCDK5INQA&t=">[Showcase And Random Battle Video!]</a></h3>
+                            <p><a href="https://www.mediafire.com/file/3dgte4g3hztzjq9/Mac_The_Ice_Piero.zip/file" class="download-link">[DOWNLOAD]</a></p>
                         </div>
                     </div>
                 </div>
-            </div>
+                
 
-            <div class="charlist">
-                <div class="charprof">
-                    <div class="cpTop">
-                        <h1> <span style="color:rgb(255, 30, 0);">Spicy Donald Solo</span></h1></div>
-                    <div class="cpCenter">
-                        <div class="cpLeft">
-                            <img src="img/Spicy_Donald_Stand_New.gif">
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1><span class="donald-color">Donald</span> <span class="solo-color">Solo</span> <span class="a5x-r-color">A5X-R</span></h1>
+                            <h1><span class="remastered-a5x">-REMASTERED A5X-</span></h1>
                         </div>
-                        <div class="cpRight">
-                            <div class="charstatus">
-                                <h3>Status: <span style="color: rgb(30, 255, 0);">Finished!! (100%)</span></h3>
-                                <h3>Privacy: <span style="color: rgb(81, 255, 0);">Released and private! 🎉</span></h3>
-                                <h3>Description: </h3>
+                        <div class="cpCenter">
+                            <div class="cpLeft">
+                                <img src="img/A5X-R_Stand.gif" alt="Donald Solo A5X-R Standing"/>
+                            </div>
+                            <div class="cpRight">
+                                <div class="charstatus">
+                                    <h3>Status: <span class="totally-finished-status">Totally Finished and Released! - (100%)</span></h3>
+                                    <h3>Privacy: <span class="private-status">Private (Totally)</span></h3>
+                                    <h3>Description:</h3>
+                                    <p>
+                                        This is a remastered edition of my long-running "Solo" edits. <br>
+                                        While Spicy Donald Solo was planned to be my final Solo edit, A5X-R emerged. <br>
+                                        My years of experience have gone into making this as enjoyable as possible, without compromising its original essence. <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cpBottom">
+                            <h2>Public version:</h2>
+                            <p><a href="https://www.mediafire.com/file/13fo4y6gyibdcxk/Donald_Solo_a5+X-R.zip/file" class="download-link">[DOWNLOAD]</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                            
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1><span class="ultimate-title">Ultimate Ronald - The Complete version!</span></h1>
+                        </div>
+                        <div class="cpCenter">
+                            <div class="cpLeft">
+                                <img src="img/U_Ronald_Stand_new.gif" alt="Ultimate Ronald Standing"/>
+                            </div>
+                            <div class="cpRight">
+                                <div class="charstatus">
+                                    <h3>Status: <span class="totally-finished-status">Totally Finished And Released! - (100%)</span></h3>
+                                    <h3>Privacy: <span class="public-status">Totally Public!</span> <span class="leaked-status">- LEAKED!</span></h3>
+                                    <h3>Description:</h3>
+                                    <p>
+                                        Ultimate Donald has always been a popular edit that inspired mine. <br>
+                                        Ultimate Donald R, also known as Ultimate Ronald, was released in 2020. <br>
+                                        But something is missing... Do you know what it is? <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cpBottom">
+                            <p><a href="https://www.mediafire.com/file/ib9k6bzjey7nelb/Ultimate+Donald+R.zip/file" class="download-link">[DOWNLOAD]</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1 class="char-title dark-killer-donald-title">Dark Killer Donald</h1>
+                        </div>
+                        <div class="cpCenter">
+                            <div class="cpLeft">
+                                <img src="img/Dark_Killer_Donald_Sprite.png" alt="Dark Killer Donald Sprite" class="char-img">
+                            </div>
+                            <div class="cpRight">
+                                <div class="charstatus">
+                                    <h3 class="char-status">Status: <span class="totally-finished-status">Finished!</span></h3>
+                                    <h3 class="char-privacy">Privacy: <span class="private-status">Not Released to the public. (No Download Link)</span></h3>
+                                    <h3 class="char-description-title">Description: </h3>
+                                    <p class="char-description">
+                                        Another rare edition I made that few people have. <br>
+                                        Once run in-game it changes the window name in mugen. <br>
+                                        It was seen in a single video on my channel. <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1 class="spicy-title">Spicy Donald Solo</h1>
+                        </div>
+                        <div class="cpCenter">
+                            <div class="cpLeft">
+                                <img src="img/Spicy_Donald_Stand_New.gif" alt="Spicy Donald Standing"/>
+                            </div>
+                            <div class="cpRight">
+                                <div class="charstatus">
+                                    <h3>Status:  <span class="totally-finished-status">Finished!! (100%)</span></h3>
+                                    <h3>Privacy: <span class="private-status">Released and private! 🎉</span></h3>
+                                    <h3>Description:</h3>
                                     <p>
                                         The last Donald Solo edit I will do! <br>
                                         Probably the strangest mix I've ever done haha. <br>
@@ -529,295 +812,282 @@
                             </div>
                         </div>
                         <div class="cpBottom">
-                            <h3><p><a href="https://www.youtube.com/watch?v=E10wC6L7yBw">[Showcase & Release!]</a></p></h3>
-                        <p><a href="https://www.mediafire.com/file/qmbdbpac52oz1ye/Spicy_Donald_SOLO.zip/file"><span style="color: rgb(72, 255, 0);">[DOWNLOAD]</a></p></span>
-                                    </p>
-                            </div>
+                            <p class="showcase-link"><a href="https://www.youtube.com/watch?v=E10wC6L7yBw">[Showcase & Release!]</a></p>
+                            <p class="download-link"><a href="https://www.mediafire.com/file/qmbdbpac52oz1ye/Spicy_Donald_SOLO.zip/file">[DOWNLOAD]</a></p>
                         </div>
                     </div>
                 </div>
             
-                                                <div class="charlist">
-                                                    <div class="charprof">
-                                                        <div class="cpTop">                         
-        <h1> <span style="color:rgb(255, 255, 255);">STAGES!</span></h1></div>
-
-    </div>
-</div>
-</div>
-</div>                            
-
-
-<div class="charlist">
-    <div class="charprof">
-        <div class="cpTop">
-            <h1> <span style="color:rgb(0, 89, 255);">I Wanna Be The Evil Donald!</span></h1></div>
-        <div class="cpCenter">
-            <div class="cpLeft">
-                <img src="img/I_Wanna_Be_The_Evi_Donald.png" height="250">
-            </div>
-            <div class="cpRight">
-                <div class="charstatus">
-                    <h3>Status: <span style="color: rgb(0, 255, 0);">Totally Finished and Released!</span></h3>
-                    <h3>Privacy: <span style="color: rgb(255, 251, 0);">Offline.</span></h3>
-                    <h3>Description: </h3>
-                        <p>
-                            It is the first and only stage I have ever done <br>
-                            or rather edit! <br>
-                            I don't think I should describe this stage. <br>
-
-                            It has already been in several videos! <br>
-                            As a curiosity, it was released with Ultimate Evil Donald! <br>
-
-                        </p>
-                </div>
-            </div>
-        </div>
-            <div class="cpBottom">
-                <h3><p><a href="https://www.youtube.com/watch?v=O0lWb0XWzXQ&t">[PREVIEW]</a></p></h3>
-    </div>
-</div>
-</div>
-</div>
-
-
-                                        
-                    <div class="charlist">
-                        <div class="charprof">
-                            <div class="cpTop">       
-
-                <h1> <span style="color:rgb(255, 145, 0);">Non released. (Still in development!)</span></h1></div>
-
-            </div>
-        </div>
-    </div>
-    </div>
-
-                            <div class="charlist">
-                                <div class="charprof">
-                                    <div class="cpTop">
-                                        <h1> <span style="color:rgb(0, 89, 255);">Ice Donald Solo v1.2 (Final)</span></h1></div>
-                                    <div class="cpCenter">
-                                        <div class="cpLeft">
-                                            <img src="img/Ice_Donald_Solo_Stand.gif">
-                                        </div>
-                                        <div class="cpRight">
-                                            <div class="charstatus">
-                                                <h3>Status: <span style="color: rgb(179, 255, 0);">Parcialy Finished!</span></h3>
-                                                <h3>Privacy: <span style="color: rgb(255, 0, 0);">Non-Released, for the moment...</span></h3>
-                                                <h3>Description: </h3>
-                                                    <p>
-                                                        Once upon a time, I released a Donald edit dedicated to my favorite season, Christmas! <br>
-                                                        This edit was supposed to be released on Christmas 2022, but due to lack of time and other factors <br>
-                                                        I cancelled it, although, it is "finished" there are still some things to be polished <br>
-                                                        among those the AI and the 12p to work at 100%. <br>
-
-                                                        If all goes well, the ETA will be December 2023! <br>
-                
-                                                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        <h3>DL = <span style="color: rgb(255, 166, 0);">Avaliable date: ???</span></h3>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                            <div class="charlist">
-                                <div class="charprof">
-                                    <div class="cpTop">  
-
-            <h2><span style = "color:rgb(255, 0, 0);">CANCELLED PROJECTS! (They will no longer be taken into account)</span></h2>
-
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="charlist">
-    <div class="charprof">
-        <div class="cpTop">
-            <h1> <span style="color:rgb(0, 153, 255);">Little Ice Fairy (Cirno edit)</span></h1></div>
-        <div class="cpCenter">
-            <div class="cpLeft">
-                <img src="img/little_ice_fairy_chirno.gif" height="200">
-            </div>
-            <div class="cpRight">
-                <div class="charstatus">
-                    <h3>Status: <span style="color: rgb(255, 0, 0);">Not finished (50%)</span></h3>
-                    <h3>Privacy: <span style="color: rgb(255, 0, 0);">Non-Released, for the moment...</span></h3>
-                    <h3>Description: </h3>
-                        <p>
-                            Yes there is a hope that I will continue to work on it <br>
-                            but, I still need to be a little more experienced with <br>
-                            mugen coding to have a quality cirno edit! <br>
-                            It's only at 50%... <br>
-
-                        </p>
-                </div>
-            </div>
-</div>
-</div>
-</div>
-
-
-<div class="charlist">
-    <div class="charprof">
-        <div class="cpTop">
-            <h1> <span style="color:rgb(0, 68, 255);">Zander Solo</span></h1></div>
-        <div class="cpCenter">
-            <div class="cpLeft">
-                <img src="img/Zander_Solo.gif">
-            </div>
-            <div class="cpRight">
-                <div class="charstatus">
-                    <h3>Status: <span style="color: rgb(255, 238, 0);">It was never finished. (It was left in beta phase)</span></h3>
-                    <h3>Privacy: <span style="color: rgb(255, 0, 0);">NOT RELEASED (NOT AVALIABLE...)</span></h3>
-                    <h3>Description: </h3>
-                        <p>
-                            Another one of the Solos I did, but it was a collaboration with Alexander Cooper, a good friend of mine. <br>
-                            There are 2 versions, since one has no strong resurrection, and my version has a strong resurrection, I tried to make it as different as possible. <br>
-                            And I liked the result a lot. Unfortunately the project was never finished, so it was cancelled. <br>
-                            And well, I doubt it will be resumed again, but well, few people have my version with the strong resurrection. <br>
-                            It should be noted that the resurrection is cheap, but, once it enters that mode, it is easy to defeat it. <br>
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <h3>DL = <span style="color: rgb(255, 0, 0);">WAS ONLY DISTRIBUTED TO A VERY FEW PEOPLE.</span></h3>
-                        </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="charlist">
-        <div class="charprof">
-            <div class="cpTop">
-                <h1> <span style="color:rgb(167, 167, 167);">Metal Donald Solo</span></h1></div>
-            <div class="cpCenter">
-                <div class="cpLeft">
-                    <img src="img/Metal_Solo_Stand.gif" height = 250 />
-                </div>
-                <div class="cpRight">
-                    <div class="charstatus">
-                        <h3>Status: <span style="color: rgb(255, 0, 0);">CANCELLED</span></h3>
-                        <h3>Privacy: <span style="color: rgb(255, 0, 0);">Not released...</span></h3>
-                        <h3>Description: </h3>
-                            <p>
-                                One day it occurred to me to make this edit, out of sheer boredom, and because there is already a "Metal Donald" but it is very poor in quality. <br>
-                                So, I wanted to make a Donald Solo, but made of metal. <br>
-                                Something like Metal Mario. <br>
-                                There's a resurrection video on my twitter, but, honestly, I won't put it here. <br>
-                                So, well, due to lack of ideas, it was cancelled. <br>
-                                I can only show the portrait and that's all. <br>
-    
-                            </p>
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1 class="stages-title">STAGES!</h1>
                         </div>
                     </div>
                 </div>
-            </div>    
 
                 <div class="charlist">
                     <div class="charprof">
                         <div class="cpTop">
-                            <h1> <span style="color:rgb(85, 10, 0);">-DARK-</span></h1></div>
+                            <h1 class="special-title"><span style="color:rgb(0, 89, 255);">I Wanna Be The Evil Donald!</span></h1>
+                        </div>
                         <div class="cpCenter">
                             <div class="cpLeft">
-                                <img src="img/-DARK-.gif">
+                                <img src="img/I_Wanna_Be_The_Evi_Donald.png" height="250">
                             </div>
                             <div class="cpRight">
                                 <div class="charstatus">
-                                    <h3>Status: <span style="color: rgb(255, 123, 0);">CANCELLED (In 25%)</span></h3>
-                                    <h3>Privacy: <span style="color: rgb(255, 0, 0);">Not released to anyone...</span></h3>
-                                    <h3>Description: </h3>
-                                        <p>
-                                            I thought of making this edit, since I love Dark Donald, and yes, this is a D-Donald edit!<br>
-                                            It will add new moves, and will be stronger (obviously.)<br>                                           
-                                            Looks like a Sadist edit, doesn't it?<br>
-                                            I'll try to do my best!<br>                                           
-                                            Progress is a little slow, but, sure!<br>
-
-                                            <div> <h3> Why did this edit come up? </h3>  </div>
-
-                                            The inspiration came from D-Donald Silver, which to date, is a very good Dark Donald edit.<br>
-                                            I don't want to match it that well, but I want it to be both fun to use and memorable!<br>
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <h2>Unique demonstration: </h2>
-                            
-                            <div class="cpBottom">
-                                <h3><p><a href="https://twitter.com/MegaStick87/status/1514498340330868738">[PREVIEW]</a></p></h3>
-                                        </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        
-                                        <div class="charlist">
-                                        <div class="charprof">
-                                            <div class="cpTop">
-                                                <h1> <span style="color:rgb(255, 251, 0);">Ultimate Donald Solo-R</span></h1></div>
-                                            <div class="cpCenter">
-                                                <div class="cpLeft">
-                                                    <img src="img/Ultimate_Donald_Solo_Stand_3.3.gif">
-                                                </div>
-                                                <div class="cpRight">
-                                                    <div class="charstatus">
-                                                        <h3>Status: <span style="color: rgb(255, 123, 0);">It was resumed, but not completed.</span></h3>
-                                                        <h3>Privacy: <span style="color: rgb(255, 0, 0);">It has hardly been distributed.</span></h3>
-                                                        <h3>Description: </h3>
-                                                            <p>
-                                                                Ultimate Donald Solo-R </p>
-                    
-                                                                It's just a "Remastering" of v3.3, it will just add new stuff, fix some problems, and be stronger, that's all. <br>
-                    
-                                                                <div> <h3> Why will I update again to this char? </h3>  </div>
-                    
-                                                                Because of the multiple leaks that v3.3 had, I will release this update, <br>
-                                                                that few people will have, that's why, I made this update!<br>
-                    
-                                                            </p>
-                                </p>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-
-            <div class="charlist">
-                <div class="charprof">
-                    <div class="cpTop">
-                    <h1> <span style="color:rgb(251, 255, 0);">Dilemma Cat</span></h1></div>
-                    <div class="cpCenter">
-                        <div class="cpLeft">
-                            <img src="img/Neko-Neko_Portrait.png" height = 200 />
-                        </div>
-                        <div class="cpRight">
-                            <div class="charstatus">
-                                <h3>Status: <span style="color: rgb(255, 123, 0);">Not Finished.</span></h3>
-                                <h3>Privacy: <span style="color: rgb(255, 0, 0);">Non-Released...</span></h3>
-                                <h3>Description: </h3>
+                                    <h3>Status: <span style="color: rgb(0, 255, 0);">Totally Finished and Released!</span></h3>
+                                    <h3>Privacy: <span style="color: rgb(255, 251, 0);">Offline.</span></h3>
+                                    <h3>Description:</h3>
                                     <p>
-                                        ??? <br> 
-
+                                        It is the first and only stage I have ever done <br>
+                                        or rather edit! <br>
+                                        I don't think I should describe this stage. <br>
+                                        It has already been in several videos! <br>
+                                        As a curiosity, it was released with Ultimate Evil Donald! <br>
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="cpBottom">
-                            <h3><p><a href="https://twitter.com/MegaStick87/status/1526764252513636353">[PREVIEW]</a></p></h3>
-                      </p>
+                            <h3><p><a href="https://www.youtube.com/watch?v=O0lWb0XWzXQ&t">[PREVIEW]</a></p></h3>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1 class="special-title">
+                                <span style="color:rgb(255, 145, 0);">Non released. (Still in development!)</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1 class="ice-title">Ice Donald Solo v1.2 (Final)</h1>
+                        </div>
+                        <div class="cpCenter">
+                            <div class="cpLeft">
+                                <img src="img/Ice_Donald_Solo_Stand.gif" alt="Ice Donald Standing"/>
+                            </div>
+                            <div class="cpRight">
+                                <div class="charstatus">
+                                    <h3>Status:  <span class="partially-finished-status">Partially Finished!</span></h3>
+                                    <h3>Privacy: <span class="non-released-status">Non-Released, for the moment...</span></h3>
+                                    <h3>Description:</h3>
+                                    <p>
+                                        Once upon a time, I released a Donald edit dedicated to my favorite season, Christmas! <br>
+                                        This edit was supposed to be released on Christmas 2022, but due to lack of time and other factors <br>
+                                        I cancelled it, although, it is "finished" there are still some things to be polished <br>
+                                        among those the AI and the 12p to work at 100%. <br>
+                                        If all goes well, the ETA will be December 2023! <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cpBottom">
+                            <h3>DL: <span class="available-dm-status">Available date: ???</span></h3>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h2 class="cancelled-title">CANCELLED PROJECTS! (They will no longer be taken into account)</h2>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="charlist">
+                    <div class="charprof">
+                        <div class="cpTop">
+                            <h1 class="fairy-title">Little Ice Fairy (Cirno edit)</h1>
+                        </div>
+                        <div class="cpCenter">
+                            <div class="cpLeft">
+                                <img src="img/little_ice_fairy_chirno.gif" alt="Little Ice Fairy Standing" height="200">
+                            </div>
+                            <div class="cpRight">
+                                <div class="charstatus">
+                                    <h3>Status: <span class="not-finished-status">Not finished (50%)</span></h3>
+                                    <h3>Privacy: <span class="non-released-status">Non-Released, for the moment...</span></h3>
+                                    <h3>Description:</h3>
+                                    <p>
+                                        Yes, there is a hope that I will continue to work on it <br>
+                                        but, I still need to be a little more experienced with <br>
+                                        mugen coding to have a quality Cirno edit! <br>
+                                        It's only at 50%... <br>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+<div class="charlist">
+    <div class="charprof">
+        <div class="cpTop">
+            <h1 class="zander-title">Zander Solo</h1>
+        </div>
+        <div class="cpCenter">
+            <div class="cpLeft">
+                <img src="img/Zander_Solo.gif" alt="Zander Solo Standing">
+            </div>
+            <div class="cpRight">
+                <div class="charstatus">
+                    <h3>Status: <span class="beta-phase-status">It was never finished. (It was left in beta phase)</span></h3>
+                    <h3>Privacy: <span class="not-available-status">NOT RELEASED (NOT AVAILABLE...)</span></h3>
+                    <h3>Description:</h3>
+                    <p>
+                        Another one of the Solos I did, but it was a collaboration with Alexander Cooper, a good friend of mine. <br>
+                        There are 2 versions, since one has no strong resurrection, and my version has a strong resurrection, I tried to make it as different as possible. <br>
+                        And I liked the result a lot. Unfortunately the project was never finished, so it was cancelled. <br>
+                        And well, I doubt it will be resumed again, but well, few people have my version with the strong resurrection. <br>
+                        It should be noted that the resurrection is cheap, but, once it enters that mode, it is easy to defeat it. <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cpBottom">
+            <h3>DL: <span class="limited-distribution-status">WAS ONLY DISTRIBUTED TO A VERY FEW PEOPLE.</span></h3>
+        </div>
+    </div>
+</div>
+
+
+<div class="charlist">
+    <div class="charprof">
+        <div class="cpTop">
+            <h1 class="metal-title">Metal Donald Solo</h1>
+        </div>
+        <div class="cpCenter">
+            <div class="cpLeft">
+                <img src="img/Metal_Solo_Stand.gif" alt="Metal Donald Solo Standing" height="250">
+            </div>
+            <div class="cpRight">
+                <div class="charstatus">
+                    <h3>Status: <span class="not-available-status">CANCELLED</span></h3>
+                    <h3>Privacy: <span class="not-available-status">Not released...</span></h3>
+                    <h3>Description:</h3>
+                    <p>
+                        One day it occurred to me to make this edit, out of sheer boredom, and because there is already a "Metal Donald" but it is very poor in quality. <br>
+                        So, I wanted to make a Donald Solo, but made of metal. <br>
+                        Something like Metal Mario. <br>
+                        There's a resurrection video on my twitter, but, honestly, I won't put it here. <br>
+                        So, well, due to lack of ideas, it was cancelled. <br>
+                        I can only show the portrait and that's all. <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="charlist">
+    <div class="charprof">
+        <div class="cpTop">
+            <h1 class="dark-title">-DARK-</h1>
+        </div>
+        <div class="cpCenter">
+            <div class="cpLeft">
+                <img src="img/-DARK-.gif" alt="-DARK-">
+            </div>
+            <div class="cpRight">
+                <div class="charstatus">
+                    <h3>Status: <span class="cancelled-percentage">CANCELLED (In 25%)</span></h3>
+                    <h3>Privacy: <span class="not-available-status">Not released to anyone...</span></h3>
+                    <h3>Description:</h3>
+                    <p>
+                        I thought of making this edit, since I love Dark Donald, and yes, this is a D-Donald edit!<br>
+                        It will add new moves, and will be stronger (obviously.)<br>                                           
+                        Looks like a Sadist edit, doesn't it?<br>
+                        I'll try to do my best!<br>                                           
+                        Progress is a little slow, but, sure!<br>
+                    </p>
+                    <h3>Why did this edit come up?</h3>
+                    <p>
+                        The inspiration came from D-Donald Silver, which to date, is a very good Dark Donald edit.<br>
+                        I don't want to match it that well, but I want it to be both fun to use and memorable!<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cpBottom">
+            <h2>Unique demonstration:</h2>
+            <h3><a class="preview-link" href="https://twitter.com/MegaStick87/status/1514498340330868738">[PREVIEW]</a></h3>
+        </div>
+    </div>
+</div>
+
+
+<div class="charlist">
+    <div class="charprof">
+        <div class="cpTop">
+            <h1 class="ultimate_solo-r-title">Ultimate Donald Solo-R</h1>
+        </div>
+        <div class="cpCenter">
+            <div class="cpLeft">
+                <img src="img/Ultimate_Donald_Solo_Stand_3.3.gif" alt="Ultimate Donald Solo-R">
+            </div>
+            <div class="cpRight">
+                <div class="charstatus">
+                    <h3>Status: <span class="cancelled-percentage">It was resumed, but not completed.</span></h3>
+                    <h3>Privacy: <span class="not-available-status">It has hardly been distributed.</span></h3>
+                    <h3>Description:</h3>
+                    <p>
+                        Ultimate Donald Solo-R is just a "Remastering" of v3.3; it will add new stuff, fix some problems, and be stronger—that's all. <br>
+                    </p>
+                    <h3>Why will I update again to this char?</h3>
+                    <p>
+                        Because of the multiple leaks that v3.3 had, I will release this update that few people will have—that's why I made this update.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="charlist">
+    <div class="charprof">
+        <div class="cpTop">
+            <h1 class="dilemma-title">Dilemma Cat</h1>
+        </div>
+        <div class="cpCenter">
+            <div class="cpLeft">
+                <img src="img/Neko-Neko_Portrait.png" alt="Dilemma Cat" height="200">
+            </div>
+            <div class="cpRight">
+                <div class="charstatus">
+                    <h3>Status: <span class="cancelled-percentage">Not Finished.</span></h3>
+                    <h3>Privacy: <span class="not-available-status">Non-Released...</span></h3>
+                    <h3>Description:</h3>
+                    <p>
+                        ??? <br> 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cpBottom">
+            <h3>
+                <p><a class="preview-link" href="https://twitter.com/MegaStick87/status/1526764252513636353">[PREVIEW]</a></p>
+            </h3>
+        </div>
+    </div>
+</div>
+
 
                 <div class="charlist">
                     <div class="charprof">
@@ -826,6 +1096,10 @@
                 <div style="text-align:center"><marquee behavior="alternate" Scrollamount="2" scrolldelay="50" width="50%" truespeed style="font:16pt serif;animation: acid 3s linear infinite">
                     <span style="color:rgb(255, 255, 255)">I have nothing more to add, but, thank you for visit the whole page! 🤓</span>
                     </marquee></div>
+
+                    <div class="scroll-to-top">
+                        <button onclick="scrollToTop()">Volver al inicio</button>
+                    </div>           
 
         <script>
             /* Oh, hiii! u see me? lol */
@@ -848,7 +1122,13 @@
             }
             document.onmousedown=right;
             if (document.layers) window.captureEvents(Event.MOUSEDOWN);
-            window.onmousedown=right;       
+            window.onmousedown=right;      
+            
+            function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+            }   
+
+            
 
             </script>
             </center>
