@@ -1,0 +1,371 @@
+body {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: American_Captain;
+    src: url(fuentes/American_Captain.ttf);
+}
+
+header {
+    height: auto;
+    width: 100%;
+}
+
+.link-container {
+  display: flex; /* Establece el contenedor para usar flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 100%;
+}
+
+.MegaStick-anim {
+  width: 150%;
+}
+
+.charlist {
+    width: 100%;
+    max-width: 720px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.charlist li {
+    list-style-type: none;
+}
+
+.charprof {
+    width: 100%;
+    max-width: 720px;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil para efecto de vidrio */
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Para que el blur no se salga de los bordes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+    padding: 20px; /* Espaciado interno */
+}
+
+.charname {
+    font-family: serif;
+    font-size: 25px;
+    height: auto;
+    margin: auto;
+}
+
+.cpCenter {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.cpLeft {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparente para combinar con el glassmorphism */
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cpLeft img {
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.cpRight {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: auto;
+}
+
+.cpBottom a {
+    height: auto;
+    margin: auto;
+    font-size: 20px;
+    color: yellowgreen;
+}
+
+.cpBottom a:hover {
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-family: American_Captain;
+    margin: 0px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.title-repo {
+  padding-top: 30px;
+  padding-bottom: 0px;
+  font-size: 60px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    font-family: American_Captain;
+    margin: 0px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+p {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.linea-separadora {
+    border-bottom: 2px solid #ffffff;
+    width: 100%;
+    margin: 10px 0;
+    }
+
+/* I need to adapt this on the page! */
+
+/* Status classes! */
+.finished {
+    color: rgb(9, 255, 0);
+  }
+
+  .has-problem {
+    color: rgb(255, 0, 0);
+  }
+
+  .in-progress {
+    color: rgb(255, 230, 0);
+  }
+
+  .problem-status {
+    color: rgb(255, 115, 0);
+    }
+
+    .download-link {
+    color: rgb(43, 255, 0);
+    }
+
+.download-icon {
+    margin-top: 0;
+    margin-bottom: -10px;
+    height: 70px;
+    filter: invert(100%);
+    max-width: 100%;
+}
+
+/* Character font color! */    
+
+.evil-color {
+  color: rgb(0, 204, 255);
+  font-weight: bold;  
+  }
+
+.donald-yellow-color {
+color: rgb(255, 251, 0);
+font-weight: bold;  
+}
+
+.ice-color {
+  color: rgb(0, 89, 255);
+  font-weight: bold;  
+}
+
+.mini-ice-donald-img {
+  height: 100px;
+}
+
+.me-per-donas-img {
+  height: 200px;
+}
+
+.piero-img {
+  height: 400px;
+}
+
+.donald-color {
+  color: rgb(255, 0, 0);
+  font-weight: bold;  
+  text-shadow: 2px 2px 4px #000000;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.donald-a5xr-color {
+  color: rgb(242, 255, 65);
+  font-weight: bold;  
+}
+
+.dark-killer-color {
+  color: rgb(19, 19, 19);
+  font-weight: bold; 
+  text-shadow: 2px 2px 4px #4e4e4e;  /* Sombra de texto para hacerlo más destacado */
+}
+
+.dark-killer-img {
+  height: 210px;
+  border-radius: 2%;
+}
+
+.spicy-color {
+  color: rgb(255, 30, 0);
+  font-size: 2em;  
+  font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+}
+
+.badapple-color {
+  color: rgb(116, 116, 116);
+  font-size: 2em;  
+  font-weight: bold;  /* Puedes quitar esto si no lo quieres */
+}
+
+.stages-title {
+  color: rgb(255, 255, 255);
+  font-size: 2em;  /* Aumenta el tamaño del texto */
+  font-weight: bold;  /* Hace el texto en negrita */
+  font-size: 40px;
+}
+
+.evil-stage-img{
+  height: 250px;
+}
+
+.non-released-title {
+  color: red;
+  font-size: 2em;
+  font-weight: bold;
+
+}
+
+/* Cancelled title animation! */
+.cancelled-title {
+  animation-name: color-change;
+  animation-duration: 2s; /* Duración de la animación */
+  animation-iteration-count: infinite; /* La animación se repetirá indefinidamente */
+}
+
+@keyframes color-change {
+  0% {
+      color: rgb(255, 0, 0);
+  }
+  25% {
+      color: rgb(234, 0, 255);
+  }
+  50% {
+      color: rgb(255, 255, 0);
+  }
+  75% {
+      color: rgb(255, 255, 255);
+  }
+  100% {
+      color: rgb(255, 0, 0);
+  }
+}
+
+.fairy-color {
+  color: rgb(0, 153, 255);
+  font-weight: bold; 
+}
+
+.cirno-img {
+  height: 200px;
+}
+
+.metal-color {
+  color: rgb(167, 167, 167);
+  font-weight: bold;
+}
+
+.dark-color {
+  color: rgb(85, 10, 0);
+  font-weight: bold; 
+}
+
+
+.centered-marquee {
+  text-align: center;
+}
+
+.custom-marquee {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 18px;
+  animation: acid 3s linear infinite;
+}
+
+.marquee-text {
+  color: rgb(255, 255, 255);
+}
+
+
+.scroll-to-top button {
+  background-color: #2e2e2e;  /* Color de fondo del botón */
+  color: rgb(255, 255, 255);  /* Color del texto */
+  padding: 14px 20px;  /* Espaciado interior */
+  margin: 14px 0;  /* Margen exterior */
+  border: none;  /* Sin bordes */
+  cursor: pointer;  /* Cursor de mano */
+  text-align: center;  /* Texto centrado */
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 18px;
+}
+
+
+@media only screen and (max-width: 480px) {
+  /* Estilos para dispositivos móviles */
+
+  body {
+      flex-direction: column;
+      align-items: center; /* Centra los elementos en dispositivos móviles */
+  }
+
+  .cpCenter {
+    flex-direction: column; /* Cambia la dirección del flex a columna para dispositivos móviles */
+}
+
+.charprof,
+.cpCenter,
+.cpLeft,
+.cpRight {
+    width: 100%; /* Hace que los elementos ocupen el ancho completo */
+    padding: 10px; /* Añade un poco de padding para no tocar los bordes de la pantalla */
+    margin: 10px 0; /* Añade margen arriba y abajo para separar los elementos */
+    box-sizing: border-box; /* Asegúrate de que el padding y el border no aumenten el ancho */
+}
+
+.cpLeft,
+.cpRight {
+    width: 100%; /* En dispositivos móviles, cada uno ocupa el ancho total */
+    margin-top: 20px; /* Agrega espacio entre la imagen y el texto */
+}
+
+.cpLeft img {
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+}
