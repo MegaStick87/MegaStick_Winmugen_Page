@@ -1,0 +1,138 @@
+/* Main Menu - Style */
+/* A more minimalistic menu - Remastered! */
+
+body {
+    font-family: American_Captain;
+    text-align: center;
+    color: white;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 2px 4px #000000;
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: American_Captain;
+    src:url(fuentes/American_Captain.ttf); 
+}
+
+@font-face {
+    font-family: 'KdamThmorPro-Regular';
+    src: url('fuentes/KdamThmorPro-Regular.ttf') format('truetype');
+    }
+
+#font_vid {
+    position: fixed; /* Posiciona el video de manera fija en la página. */
+    right: 0; /* Alinea el video a la derecha. */
+    bottom: 0; /* Alinea el video en la parte inferior. */
+    min-width: 100%; /* Ancho mínimo del video: 100% del ancho de la ventana. */
+    min-height: 100%; /* Altura mínima del video: 100% de la altura de la ventana. */
+    z-index: -1; /* Coloca el video detrás de otros elementos. */
+    align-items: center; /* Centra verticalmente el contenido del video. */
+}
+
+p {
+        text-align: center;
+        margin: 0;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        font-size: 64px;
+        /* Se remueve el glassmorphism del título principal para mantener la legibilidad */
+}
+
+header{
+    height: auto;
+    width: 100%;
+}
+
+h3 {
+    font-family: 'KdamThmorPro-Regular', sans-serif;
+    text-align: center;
+    }
+
+/* .linea-separadora {
+    border-bottom: 2px solid #ffffff;
+    width: 100%;
+    margin: 10px 0;
+    } */
+
+/* List Styles */
+ul.contenedor-vertical {
+    list-style-type: none;
+    padding: 0;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    /* Glassmorphism background */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+ul.contenedor-vertical li {
+    margin: 20px 0;
+}
+
+.mugen-repo {
+    display: inline-block; /* Para aplicar el padding y background */
+    padding: 10px; /* Espaciado alrededor de la imagen */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    border-radius: 10px;
+}
+
+.mugen-repo:hover {
+    background-color: #5c5c5c; /* Cambia a tu color deseado */
+}
+
+.youtube-link {
+    display: inline-block; /* Para aplicar el padding y background */
+    padding: 10px; /* Espaciado alrededor de la imagen */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    border-radius: 10px;
+}
+
+.youtube-link:hover {
+    background-color: #5f0000; /* Cambia a tu color deseado */
+}
+
+.twitter-link {
+    display: inline-block; /* Para aplicar el padding y background */
+    padding: 10px; /* Espaciado alrededor de la imagen */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    border-radius: 10px;
+}
+
+.twitter-link:hover {
+    background-color: #00345f; /* Cambia a tu color deseado */
+}
+
+/* The main-menu page needs to be responsive, so this thing will help! */
+
+@media (min-width: 768px) {
+    ul.contenedor-vertical {
+    flex-direction: row;
+    justify-content: center;
+    }
+
+    ul.contenedor-vertical li {
+    margin: 10px;
+    flex-basis: 33.333%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #font_vid {
+        display: none; /* Esto ocultará el video en dispositivos con un ancho de hasta 480 píxeles */
+    }
+}      
