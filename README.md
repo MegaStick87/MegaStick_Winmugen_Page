@@ -6,23 +6,31 @@ I have tried to make it my best work, so I do the best I can with everything I h
 
 This page was made for the sole purpose of showing my work throughout this time. 
 
-From 2018 to 20?? 
+From 2018 to 2023!
 
-So, I hope I can continue learning to improve this site in the future. :D
+This time on 03/03/2024 I have made a gigantic improvement to the page, making  everything more orderly.
 
-## Planned future improvements.
+## Improvements.
 
-- Make a better UI.
+-Home page code totally fixed!
 
-- Fix bugs in code. 
+-Home page design also changed!
 
-- Add animations with real time effects using JS in the future. (Explods anims)
+-Now the Home Page is fully responsive, you can view it on your smartphone without any problems!
 
-- Change the page where my chars are presented completely.
+-The icon of the home page also changed, as well as the repository!
 
-- Improvements in the main menu.
+-The icons on the home page now have a hover animation!
 
-- And more!!
+-New Fonts!
+
+-The repo code is totally fixed!
+
+-New Repo UI!
+
+-New background font!
+
+-And much more!
 
 ## Follow me on my social media!
 
